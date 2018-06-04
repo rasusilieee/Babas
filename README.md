@@ -1,6 +1,9 @@
-# Basbas
+# Babas
+
 Brazo Robótico
+
 Developments:
+
   JOSE EDUARDO ROMERO JIMENEZ
   LUIS ZACARIAS QUISPE OJEDA
   VITO ANCEL LEZAMA FLORES
