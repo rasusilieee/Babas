@@ -1,2 +1,6 @@
 # Basbas
-Brazo Robotico
+Brazo Robótico
+Developments:
+  JOSE EDUARDO ROMERO JIMENEZ
+  LUIS ZACARIAS QUISPE OJEDA
+  VITO ANCEL LEZAMA FLORES
