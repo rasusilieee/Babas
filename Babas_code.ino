@@ -42,6 +42,8 @@ void setup() {
   delay(100);
   GANCHO.write(P_GANCHO);
   delay(100);
+
+  pinMode(GANCHO_PWRD,LOW);
   
   Serial.begin(9600);
   bluetooth.begin(9600);
@@ -140,8 +142,7 @@ void setup() {
           ART_2.write(i);
           delay(25);
         }
-      }
-      
+      }      
       P_ART_2=a;
       estado = "";
     }
@@ -256,7 +257,8 @@ void setup() {
         }
       }
      P_ART_2=100; //Nueva Posición
-      
+
+     pinMode(GANCHO_PWRD,HIGH);
      for(int i=0;i<3;i++)
      {
       if(120>P_GANCHO)
@@ -343,7 +345,8 @@ void setup() {
         }
       }
      P_ART_2=15; //Nueva Posición
-      
+     
+     pinMode(GANCHO_PWRD,HIGH);
      for(int i=0;i<3;i++)
      {
       if(120>P_GANCHO)
@@ -411,6 +414,8 @@ void setup() {
           delay(25);
         }
       }
+      P_ART_1=50; //Nueva Posición
+      
       if(140>P_ART_2)
       {
         for(int i=P_ART_2;i<140;i++)
@@ -427,45 +432,9 @@ void setup() {
           delay(25);
         }
       }
-     for(int i=0;i<3;i++)
-     {
-      if(120>P_GANCHO)
-      {
-        for(int i=P_GANCHO;i<120;i++)
-        {
-          GANCHO.write(i);
-          delay(25);
-        }
-      }
-     else
-      {
-        for(int i=P_GANCHO;i>120;i--)
-        {
-          GANCHO .write(i);
-          delay(25);
-        }
-      }
-      P_GANCHO=120;
-      
-      if(80>P_GANCHO)
-      {
-        for(int i=P_GANCHO;i<80;i++)
-        {
-          GANCHO.write(i);
-          delay(25);
-        }
-      }
-     else
-      {
-        for(int i=P_GANCHO;i>80;i--)
-        {
-          GANCHO .write(i);
-          delay(25);
-        }
-      }
-      P_GANCHO=80;
-     }
-             
+      P_ART_2=140; //Nueva Posición
+
+     
     Serial.println("PARTE 3");
     Serial.println("Posición Servo Base: ");
     Serial.println(P_BASE);
@@ -540,9 +509,8 @@ void setup() {
       }
      P_ART_1=50; //Nueva Posición
     }
-     
-     for(int i=0;i<3;i++)
-     {
+
+    pinMode(GANCHO_PWRD,HIGH);
       if(120>P_GANCHO)
       {
         for(int i=P_GANCHO;i<120;i++)
@@ -578,8 +546,7 @@ void setup() {
         }
       }
       P_GANCHO=80;
-     }
-     
+      
     Serial.println("PARTE 4");
     Serial.println("Posición Servo Base: ");
     Serial.println(P_BASE);
@@ -650,8 +617,7 @@ void setup() {
      P_ART_1=50; //Nueva Posición
     }
      
-     for(int i=0;i<3;i++)
-     {
+    pinMode(GANCHO_PWRD,HIGH);
       if(120>P_GANCHO)
       {
         for(int i=P_GANCHO;i<120;i++)
@@ -687,7 +653,6 @@ void setup() {
         }
       }
       P_GANCHO=80;
-     }
      
     Serial.println("PARTE 5");
     Serial.println("Posición Servo Base: ");
@@ -759,8 +724,7 @@ void setup() {
      P_ART_1=50; //Nueva Posición
     }
      
-     for(int i=0;i<3;i++)
-     {
+    pinMode(GANCHO_PWRD,HIGH);
       if(120>P_GANCHO)
       {
         for(int i=P_GANCHO;i<120;i++)
@@ -796,7 +760,6 @@ void setup() {
         }
       }
       P_GANCHO=80;
-     }
      
     Serial.println("PARTE 6");
     Serial.println("Posición Servo Base: ");
@@ -844,6 +807,8 @@ void setup() {
           delay(25);
         }
       }
+      P_ART_1=50; //Nueva Posición
+      
       if(140>P_ART_2)
       {
         for(int i=P_ART_2;i<140;i++)
@@ -860,8 +825,9 @@ void setup() {
           delay(25);
         }
       }
-     for(int i=0;i<3;i++)
-     {
+      P_ART_2=140; //Nueva Posición
+ 
+         pinMode(GANCHO_PWRD,HIGH);
       if(120>P_GANCHO)
       {
         for(int i=P_GANCHO;i<120;i++)
@@ -897,7 +863,6 @@ void setup() {
         }
       }
       P_GANCHO=80;
-     }
              
     Serial.println("PARTE 7");
     Serial.println("Posición Servo Base: ");
